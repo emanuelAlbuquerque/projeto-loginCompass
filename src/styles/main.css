@@ -22,7 +22,7 @@
   font-size: 3.75rem;
 }
 .container_tela-login #tela-login__login .tela-login__login-header .tela-login__login-header__description {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #E0E0E0;
   line-height: 20px;
 }
@@ -46,6 +46,13 @@
   flex-direction: row-reverse;
   align-items: center;
   width: 100%;
+  position: relative;
+}
+.container_tela-login #tela-login__login .form__login .form__login-group .form__login-group_label {
+  position: absolute;
+  top: 12px;
+  left: 315px;
+  color: #E0E0E0;
 }
 .container_tela-login #tela-login__login .form__login .form__login-error {
   color: #E9B425;
