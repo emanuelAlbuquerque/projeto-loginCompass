@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/reset/reset.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <title>Tela de login - COMPASS</title>
+</head>
+
+<body>
+  <main class="container_tela-login">
+
+    <section id="tela-login__login">
+      <div class="tela-login__login-header">
+        <h1 class="tela-login__login-header__titulo">Olá,</h1>
+        <p class="tela-login__login-header__description">Para continuar navegando de forma segura, efetue o login na
+          rede.</p>
+      </div>
+
+      <form action="/" class="form__login">
+        <h2 class="form__login-titulo">Login</h2>
+
+        <div class="form__login-group">
+          <!-- <label for="usuario">Usuario</label> -->
+          <input type="text" id="usuario" name="usuario" class="usuario input-login" placeholder="Usuário">
+        </div>
+
+        <div class="form__login-group">
+          <!-- <label for="senha">Usuario</label> -->
+          <input type="password" id="senha" name="senha" class="senha input-login" placeholder="Senha">
+        </div>
+
+        <p class="form__login-error">
+          Ops, usuário ou senha inválidos. Tente novamente!
+        </p>
+
+        <input type="submit" value="Continuar" class="input-button">
+      </form>
+
+    </section>
+
+
+    <section id="tela-login__imagem">
+
+      <img src="./src/assets/logo-compass.svg" alt="Logo da CompassUOL" class="tela-login__imagem-logo">
+
+    </section>
+  </main>
+</body>
+
+</html>
