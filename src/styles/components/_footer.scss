@@ -1,0 +1,90 @@
+#footer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-branco;
+
+  &::before {
+    content: '';
+    width: 1px;
+    height: 55px;
+    background-color: $color-branco;
+    position: absolute;
+    left: 650px;
+
+  }
+
+  .footer__texto {
+    padding: 1rem 1rem 1rem 4rem;
+    width: 100%;
+    max-width: 540px;
+    font-size: .75rem;
+    text-align: end;
+    line-height: 15px;
+  }
+
+  .footer_temporizador {
+    display: flex;
+    align-items: center;
+
+
+    .footer_temporizador-texto {
+      width: 100%;
+      max-width: 110px;
+      text-align: end;
+      margin-right: 2rem;
+      font-size: 14px;
+      line-height: 20px;
+
+    }
+
+    .footer_temporizador-contador {
+      text-align: center;
+
+      .footer_temporizador-contador_segundos {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .footer_buttons {
+    width: 100%;
+    max-width: 260px;
+    height: 100%;
+    display: flex;
+
+    .container_footer_button {
+      display: flex;
+      text-align: center;
+      height: 100%;
+      width: 50%;
+      cursor: pointer;
+
+      .button {
+        font-size: .75rem;
+        line-height: 15px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .footer_button-continuar {
+        color: $font-color-home;
+        background-color: $color-branco;
+      }
+
+      .footer_button-voltar {
+        color: $color-branco;
+        background: transparent;
+        font-weight: 700;
+      }
+    }
+  }
+}
