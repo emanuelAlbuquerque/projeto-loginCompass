@@ -1,0 +1,263 @@
+.container_tela-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
+}
+.container_tela-login #tela-login__login {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container_tela-login #tela-login__login .tela-login__login-header {
+  width: 100%;
+  max-width: 300px;
+}
+.container_tela-login #tela-login__login .tela-login__login-header .tela-login__login-header__titulo {
+  padding-bottom: 1rem;
+  color: #E0E0E0;
+  font-size: 3.75rem;
+}
+.container_tela-login #tela-login__login .tela-login__login-header .tela-login__login-header__description {
+  font-size: 1rem;
+  color: #E0E0E0;
+  line-height: 20px;
+}
+.container_tela-login #tela-login__login .form__login {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6rem;
+}
+.container_tela-login #tela-login__login .form__login .form__login-titulo {
+  font-size: 1.875rem;
+  color: #E0E0E0;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+.container_tela-login #tela-login__login .form__login .form__login-group {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+}
+.container_tela-login #tela-login__login .form__login .form__login-error {
+  color: #E9B425;
+  font-weight: 700;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 0.8rem;
+  visibility: hidden;
+}
+.container_tela-login #tela-login__imagem {
+  width: 50%;
+  background-image: url(../assets/img-login.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.container_tela-login #tela-login__imagem .tela-login__imagem-logo {
+  width: 90%;
+  max-width: 310px;
+  margin: 1rem auto 0 auto;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.input-login {
+  border: none;
+  border-radius: 50px;
+  border: 1px solid #FFFFFF;
+  padding: 1rem;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  color: #E0E0E0;
+}
+
+.input-button {
+  margin-top: 2rem;
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
+  color: #FFFFFF;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
+  font-weight: 700;
+}
+
+#body_home {
+  background: linear-gradient(105.96deg, #FFFFFF 0%, #F0F0F0 97.86%);
+  width: 100%;
+}
+#body_home #home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/img-home.png);
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  background-size: 400px;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-rows: 15% 74% 11%;
+}
+#body_home #home:first-child {
+  margin: 0;
+}
+#body_home #home #home__missao {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: end;
+  margin-right: 5rem;
+}
+#body_home #home #home__missao .home__missao-texto .primeiro-filho {
+  font-size: 2rem !important;
+}
+#body_home #home #home__missao .home__missao-texto .home__missao-texto-ingles {
+  color: #C12D18;
+  font-size: 3rem;
+  font-weight: 700;
+}
+#body_home #home #home__missao .home__missao-texto .home__missao-texto-traduzido {
+  color: #222222;
+  line-height: 30px;
+}
+
+#home__header {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 9rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#home__header .home__header-hora {
+  text-align: center;
+}
+#home__header .home__header-hora .home__header-hora__titulo {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #222222;
+}
+#home__header .home__header-hora .home__header-hora__data {
+  font-size: 0.875rem;
+  color: #222222;
+  margin-top: -0.8rem;
+}
+#home__header .home__header-localizacao .home__header-localidade {
+  font-size: 0.875rem;
+  color: #222222;
+  margin-bottom: 0.5rem;
+}
+#home__header .home__header-localizacao .home__header-localizacao__clima {
+  display: flex;
+}
+#home__header .home__header-localizacao .home__header-localizacao__clima .home__header-localizacao__clima-estacao {
+  width: 100%;
+  max-width: 34px;
+  max-height: 34px;
+  height: 100%;
+  margin-right: 10px;
+}
+#home__header .home__header-localizacao .home__header-localizacao__clima .home__header-localizacao__clima-temperatura {
+  font-size: 3rem;
+  color: #222222;
+  font-weight: 700;
+}
+
+#footer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+}
+#footer::before {
+  content: "";
+  width: 1px;
+  height: 55px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 650px;
+}
+#footer .footer__texto {
+  padding: 1rem 1rem 1rem 4rem;
+  width: 100%;
+  max-width: 540px;
+  font-size: 0.75rem;
+  text-align: end;
+  line-height: 15px;
+}
+#footer .footer_temporizador {
+  display: flex;
+  align-items: center;
+}
+#footer .footer_temporizador .footer_temporizador-texto {
+  width: 100%;
+  max-width: 110px;
+  text-align: end;
+  margin-right: 2rem;
+  font-size: 14px;
+  line-height: 20px;
+}
+#footer .footer_temporizador .footer_temporizador-contador {
+  text-align: center;
+}
+#footer .footer_temporizador .footer_temporizador-contador .footer_temporizador-contador_segundos {
+  font-size: 3rem;
+  font-weight: 700;
+}
+#footer .footer_buttons {
+  width: 100%;
+  max-width: 260px;
+  height: 100%;
+  display: flex;
+}
+#footer .footer_buttons .container_footer_button {
+  display: flex;
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  cursor: pointer;
+}
+#footer .footer_buttons .container_footer_button .button {
+  font-size: 0.75rem;
+  line-height: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+#footer .footer_buttons .container_footer_button .footer_button-continuar {
+  color: #C12D18;
+  background-color: #FFFFFF;
+}
+#footer .footer_buttons .container_footer_button .footer_button-voltar {
+  color: #FFFFFF;
+  background: transparent;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */
