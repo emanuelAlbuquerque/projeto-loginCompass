@@ -1,0 +1,49 @@
+#body_home {
+  background: linear-gradient(105.96deg, $color-branco 0%, #F0F0F0 97.86%);
+  width: 100%;
+
+  #home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/img-home.png);
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    background-size: 400px;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-rows: 15% 74% 11%;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    #home__missao {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      text-align: end;
+      margin-right: 5rem;
+
+      .home__missao-texto {
+
+
+        .primeiro-filho {
+          font-size: 2rem !important;
+        }
+
+        .home__missao-texto-ingles {
+          color: $font-color-home;
+          font-size: 3rem;
+          font-weight: 700;
+        }
+
+        .home__missao-texto-traduzido {
+          color: $color-hora;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
