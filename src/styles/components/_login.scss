@@ -1,0 +1,87 @@
+@import '../abstract/variaveis';
+
+.container_tela-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  background: $background-login;
+
+  #tela-login__login {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .tela-login__login-header {
+      width: 100%;
+      max-width: 300px;
+
+      .tela-login__login-header__titulo {
+        padding-bottom: 1rem;
+        color: $color-second;
+        font-size: 3.75rem;
+      }
+
+      .tela-login__login-header__description {
+        font-size: 1rem;
+        color: $color-second;
+        line-height: 20px;
+
+      }
+    }
+
+    .form__login {
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 6rem;
+
+      .form__login-titulo {
+        font-size: 1.875rem;
+        color: $color-second;
+        margin-bottom: 1.5rem;
+        align-self: flex-start;
+      }
+
+      .form__login-group {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 100%;
+
+
+      }
+
+      .form__login-error {
+        color: $color-login-error;
+        font-weight: 700;
+        text-align: center;
+        line-height: 20px;
+        margin-top: .8rem;
+        visibility: hidden;
+      }
+    }
+
+  }
+
+  #tela-login__imagem {
+    width: 50%;
+    background-image: url(../assets/img-login.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    .tela-login__imagem-logo {
+      width: 90%;
+      max-width: 310px;
+      margin: 1rem auto 0 auto;
+    }
+  }
+}
