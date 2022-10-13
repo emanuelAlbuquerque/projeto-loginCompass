@@ -1,0 +1,55 @@
+@import '../abstract/variaveis';
+
+#home__header {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 9rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .home__header-hora {
+    text-align: center;
+
+    .home__header-hora__titulo {
+      font-size: 8rem;
+      font-weight: 700;
+      color: $color-hora;
+    }
+
+    .home__header-hora__data {
+      font-size: .875rem;
+      color: $color-hora;
+      margin-top: -.8rem;
+    }
+  }
+
+  .home__header-localizacao {
+    .home__header-localidade {
+      font-size: .875rem;
+      color: $color-hora;
+      margin-bottom: .5rem;
+    }
+
+    .home__header-localizacao__clima {
+      display: flex;
+
+      .home__header-localizacao__clima-estacao {
+        width: 100%;
+        max-width: 34px;
+        max-height: 34px;
+        height: 100%;
+        margin-right: 10px;
+      }
+
+      .home__header-localizacao__clima-temperatura {
+        font-size: 3rem;
+        color: $color-hora;
+        font-weight: 700;
+      }
+    }
+  }
+}
