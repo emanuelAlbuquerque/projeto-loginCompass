@@ -28,7 +28,9 @@ Projeto desenvolvido com os conhecimentos adiquirios até a Sprint 4 do estágio
 - caso clique em sair voltará para página de login, caso clique em "Não" a página da um reflesh
 - lógica onde mostra o dia, a data, a hora atual do usuário
 - lógica que pega a localidade do usuário, e mostra a temperatura da sua região
-- Local Storage: Os dados preenchidos de login e password são armazenados em memória, caso o usuário realize o logout, aparece um Pop-up que pergunta ao usuário se deseja continuar logado, caso deseje, o login será automático sem a necessidade de preencher os campos novamente, caso contrário o local storage deverá ser resetado.
+- Local Storage: Os dados preenchidos de login e password são armazenados em memória, caso o usuário realize o logout, aparece um Pop-up que pergunta ao usuário se deseja continuar logado, caso deseje, o login será automático sem a necessidade de preencher os campos novamente, caso contrário o local storage deverá ser resetado
+- caso clique em "Continuar Navegando" o usuário será direcionado para a páginas de notícias da UOL
+
 
 ## 🎨 Layout
 
