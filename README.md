@@ -56,6 +56,23 @@ O layout da aplicação está disponível no Figma:
   <img alt="Modal de logout" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/modal-logout_home.png">
 </p>
 
+### Mobile
+
+- Login
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+  <img alt="Tela de login" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/login-mobile.png">
+  <img alt="Tela de login preenchido" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/login-preenchido-mobile.png">
+  <img alt="Tela de login com error" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/login-error-mobile.png">
+</p>
+
+- Home
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+  <img alt="Tela de login" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/home-mobile.png">
+</p>
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+ <img alt="Tela de login preenchido" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/home-mobile2.png">
+</p>
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
