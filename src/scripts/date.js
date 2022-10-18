@@ -26,7 +26,7 @@ const geraData = () => {
 
   containerData.innerHTML = `${dia}, ${data} de ${mes} de ${ano}`
 }
-//-------------------------------------------------------------------------------------------
+//---------------------------------------------dat----------------------------------------------
 
 
 //--------------------------Chamando as funções----------------------------------
@@ -48,9 +48,7 @@ function pegaDiaSemana(date) {
     'sábado'
   ];
 
-  let diaSemana = diasSemanas[date]
-
-  return diaSemana
+  return diasSemanas[date]
 }
 
 function pegaMes(mes) {
@@ -69,8 +67,6 @@ function pegaMes(mes) {
     'dezembro',
   ]
 
-  let mesAno = mesesAno[mes]
-
-  return mesAno
+  return mesesAno[mes]
 }
 // --------------------------------------------------------------------------
