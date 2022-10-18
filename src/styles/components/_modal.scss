@@ -1,0 +1,99 @@
+@import '../abstract/variaveis';
+
+#alert_modal,
+#alert_modal_logout {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background: rgba($color: #000000, $alpha: .5);
+
+  .container_modal{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .modal {
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      background-color: #FFFFFF;
+      background-image: url(../assets/img-home.png);
+      background-repeat: no-repeat;
+      background-position: 0 bottom;
+      background-size: 30%;
+      border-radius: 50px;
+      text-align: center;
+      position: relative;
+  
+      .modal_fechar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: $background-button;
+        width: 100%;
+        max-width: 50px;
+        height: 100%;
+        max-height: 50px;
+        border-radius: 50%;
+        color: $color-second;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+  
+        &:hover {
+          opacity: .9;
+          transition: all .3s;
+        }
+      }
+  
+      .mensagem_modal {
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        color: $font-color-home;
+      }
+  
+      .modal_buttons {
+        margin-top: 5rem;
+        margin-left: 1rem;
+  
+        .button_modal {
+          padding: 1rem;
+          border: none;
+          border-radius: 20px;
+          background: $background-button;
+          color: $color-branco;
+          font-size: 1.5rem;
+          cursor: pointer;
+  
+          &:hover {
+            opacity: .8;
+            transition: all .3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #alert_modal,
+  #alert_modal_logout{
+    .container_modal{
+      
+      .modal{
+        .mensagem_modal{
+          margin-top: 4rem;
+        }
+      }
+    }        
+  }
+}

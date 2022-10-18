@@ -4,13 +4,20 @@
   border: none;
   border-radius: 50px;
   border: 1px solid $color-branco;
-  padding: 1rem;
+  padding: 0 3rem 0 1rem;
   background: transparent;
   outline: none;
-  width: 100%;
-  margin-bottom: 1.2rem;
   color: $color-second;
+  width: 100%;
+  height: 100%;
+
+  &::placeholder {
+    color: $color-second;
+    font-size: .875rem;
+    line-height: 20px;
+  }
 }
+
 
 .input-button {
   margin-top: 2rem;
@@ -23,4 +30,5 @@
   color: $color-branco;
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
   font-weight: 700;
+  cursor: pointer;
 }

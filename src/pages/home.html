@@ -5,20 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/reset/reset.css">
-  <title>COMPASS - Home</title>
+  <title>Compass - Home</title>
 </head>
 
 <body id="body_home">
   <main id="home">
     <header id="home__header">
-      <img src="../assets/logo-compass-home.svg" alt="Logo da CompassUOL">
+      <img src="../assets/logo-compass-home.svg" alt="Logo da CompassUOL" class="logo_uol">
 
       <div class="home__header-hora">
         <h1 class="home__header-hora__titulo">11:26</h1>
@@ -26,13 +26,15 @@
       </div>
 
       <div class="home__header-localizacao">
-        <p class="home__header-localidade"><span class="cidade">Passo Fundo</span> - <span class="estado">RS</span></p>
+        <p class="home__header-localidade" id="cidade_estado"><span id="cidade_atual"></span><span id="estado_atual"></span></p>
         <div class="home__header-localizacao__clima">
-          <img src="../assets/temp-teste.png" alt="" class="home__header-localizacao__clima-estacao">
-          <h2 class="home__header-localizacao__clima-temperatura">22º</h2>
+          <img src="" alt="Clima da sua região" class="home__header-localizacao__clima-estacao" id="icone_tempo">
+          <h2 class="home__header-localizacao__clima-temperatura" id="temperatura"></h2>
         </div>
       </div>
     </header>
+
+    <img src="../assets/logo-compass-home.svg" alt="Logo da CompassUOL" class="tablet_logo_uol">
 
     <section id="home__missao">
       <div class="home__missao-texto">
@@ -55,29 +57,61 @@
 
 
     <footer id="footer">
+
+      <img src="../assets/logo-compass-home.svg" alt="Logo da CompassUOL" class="footer_logo_uol">
+
       <p class="footer__texto">Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a
         aberta em segundo plano e abra uma nova janela para continuar a navegar.</p>
+        
 
       <div class="footer_temporizador">
         <p class="footer_temporizador-texto">Application refresh in</p>
         <div class="footer_temporizador-contador">
-          <p class="footer_temporizador-contador_segundos">600</p>
+          <p class="footer_temporizador-contador_segundos" id="segundos">600</p>
           <p class="footer_temporizador-contador-texto">seconds</p>
         </div>
       </div>
 
       <div class="footer_buttons">
         <div class="container_footer_button">
-          <a href="" class="footer_button-continuar button">Continuar Navegando</a>
+          <a href="https://www.uol.com.br/" target="_blank" class="footer_button-continuar button link_button">Continuar
+            Navegando</a>
         </div>
         <div class="container_footer_button voltar">
-          <a href="" class="footer_button-voltar button">Logout</a>
+          <button class="footer_button-voltar button" id="logout">Logout</button>
         </div>
       </div>
     </footer>
 
+    <div id="alert_modal">
+      <div class="container_modal">
+        <div class="modal">
+          <p class="mensagem_modal">Vosê deseja mesmo sair da página?</p>
+          <div class="modal_buttons">
+            <button id="button_confirmar" class="button_modal">Sim</button>
+            <button id="button_negar" class="button_modal">Não</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="alert_modal_logout">
+      <div class="container_modal">
+        <div class="modal">
+          <button class="modal_fechar" id="modal_fechar">X</button>
+          <p class="mensagem_modal">Deseja continuar conectado?</p>
+          <div class="modal_buttons">
+            <button id="logout_confirmar" class="button_modal">Sim</button>
+            <button id="logout_negar" class="button_modal">Não</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="../scripts/date.js"></script>
+  <script src="../scripts/temporizador.js"></script>
+  <script src="../scripts/logout.js"></script>
+  <script src="../scripts/apiTempo.js"></script>
 </body>
 
 </html>

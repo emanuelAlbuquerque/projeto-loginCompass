@@ -5,61 +5,79 @@
   flex-flow: row wrap;
   background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
 }
+.container_tela-login .logo_compass-login {
+  display: none;
+  height: 100%;
+  max-height: 10%;
+}
 .container_tela-login #tela-login__login {
   width: 50%;
+}
+.container_tela-login #tela-login__login .container_login {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-.container_tela-login #tela-login__login .tela-login__login-header {
+.container_tela-login #tela-login__login .container_login .tela-login__login-header {
   width: 100%;
   max-width: 300px;
+  margin-top: 4rem;
 }
-.container_tela-login #tela-login__login .tela-login__login-header .tela-login__login-header__titulo {
+.container_tela-login #tela-login__login .container_login .tela-login__login-header .tela-login__login-header__titulo {
   padding-bottom: 1rem;
   color: #E0E0E0;
   font-size: 3.75rem;
 }
-.container_tela-login #tela-login__login .tela-login__login-header .tela-login__login-header__description {
+.container_tela-login #tela-login__login .container_login .tela-login__login-header .tela-login__login-header__description {
   font-size: 0.875rem;
   color: #E0E0E0;
   line-height: 20px;
 }
-.container_tela-login #tela-login__login .form__login {
+.container_tela-login #tela-login__login .container_login .form__login {
   width: 100%;
   max-width: 300px;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 6rem;
 }
-.container_tela-login #tela-login__login .form__login .form__login-titulo {
+.container_tela-login #tela-login__login .container_login .form__login .form__login-titulo {
   font-size: 1.875rem;
   color: #E0E0E0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   align-self: flex-start;
 }
-.container_tela-login #tela-login__login .form__login .form__login-group {
+.container_tela-login #tela-login__login .container_login .form__login .form__login-group {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  width: 100%;
+  align-items: flex-end;
   position: relative;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 50px;
 }
-.container_tela-login #tela-login__login .form__login .form__login-group .form__login-group_label {
+.container_tela-login #tela-login__login .container_login .form__login .form__login-group .form__login-group_label {
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 315px;
   color: #E0E0E0;
+  transition: all 0.5s;
 }
-.container_tela-login #tela-login__login .form__login .form__login-error {
+.container_tela-login #tela-login__login .container_login .form__login .form__login-group .animation {
+  left: 260px;
+  transition: all 0.5s;
+}
+.container_tela-login #tela-login__login .container_login .form__login .form__login-error {
   color: #E9B425;
   font-weight: 700;
   text-align: center;
   line-height: 20px;
-  margin-top: 0.8rem;
   visibility: hidden;
 }
 .container_tela-login #tela-login__imagem {
@@ -76,6 +94,36 @@
   margin: 1rem auto 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .container_tela-login {
+    flex-direction: column;
+  }
+  .container_tela-login .logo_compass-login {
+    display: block;
+    padding: 2rem;
+  }
+  .container_tela-login #tela-login__login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+  .container_tela-login #tela-login__login .container_login .tela-login__login-header {
+    margin-top: 2rem;
+  }
+  #tela-login__imagem {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container_tela-login #tela-login__login .container_login {
+    width: 95%;
+  }
+  .container_tela-login #tela-login__login .container_login .form__login .form__login-group .form__login-group_label {
+    left: 310px;
+  }
+}
 body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -86,12 +134,27 @@ body {
   border: none;
   border-radius: 50px;
   border: 1px solid #FFFFFF;
-  padding: 1rem;
+  padding: 0 3rem 0 1rem;
   background: transparent;
   outline: none;
-  width: 100%;
-  margin-bottom: 1.2rem;
   color: #E0E0E0;
+  width: 100%;
+  height: 100%;
+}
+.input-login::-moz-placeholder {
+  color: #E0E0E0;
+  font-size: 0.875rem;
+  line-height: 20px;
+}
+.input-login:-ms-input-placeholder {
+  color: #E0E0E0;
+  font-size: 0.875rem;
+  line-height: 20px;
+}
+.input-login::placeholder {
+  color: #E0E0E0;
+  font-size: 0.875rem;
+  line-height: 20px;
 }
 
 .input-button {
@@ -105,25 +168,30 @@ body {
   color: #FFFFFF;
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
   font-weight: 700;
+  cursor: pointer;
 }
 
 #body_home {
   background: linear-gradient(105.96deg, #FFFFFF 0%, #F0F0F0 97.86%);
   width: 100%;
+  height: 100vh;
 }
 #body_home #home {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url(../assets/img-home.png);
   background-repeat: no-repeat;
   background-position: 0 bottom;
-  background-size: 400px;
+  background-size: 28%;
   font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-rows: 15% 74% 11%;
 }
 #body_home #home:first-child {
   margin: 0;
+}
+#body_home #home .tablet_logo_uol {
+  display: none;
 }
 #body_home #home #home__missao {
   height: 100%;
@@ -147,6 +215,71 @@ body {
   line-height: 30px;
 }
 
+@media screen and (max-width: 1260px) {
+  #body_home #home #home__missao .home__missao-texto .home__missao-texto-ingles {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #body_home #home {
+    background-size: 30%;
+  }
+  #body_home #home #home__missao .home__missao-texto .home__missao-texto-ingles {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 825px) {
+  #body_home #home {
+    background-size: 35%;
+  }
+  #body_home #home #home__missao {
+    margin-right: 3rem;
+  }
+  #body_home #home #home__missao .home__missao-texto .home__missao-texto-ingles {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  #body_home {
+    height: auto;
+  }
+  #body_home #home {
+    background: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #body_home #home .tablet_logo_uol {
+    display: block;
+    align-self: center;
+    width: 40%;
+    margin-top: 3rem;
+  }
+  #body_home #home #home__missao {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+  }
+  #body_home #home #home__missao .home__missao-texto .home__missao-texto-ingles {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  #body_home #home #home__missao {
+    align-self: center;
+    margin: 7rem 0 7rem 0;
+    width: 100%;
+  }
+  #body_home #home #home__missao .home__missao-texto {
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+  #body_home #home #home__missao .home__missao-texto .home__missao-texto-ingles {
+    font-size: 1.5rem;
+  }
+  #body_home #home #home__missao .home__missao-texto .home__missao-texto-traduzido {
+    font-size: 0.875rem;
+  }
+}
 #home__header {
   width: 95%;
   margin: 0 auto;
@@ -171,6 +304,11 @@ body {
   color: #222222;
   margin-top: -0.8rem;
 }
+#home__header .home__header-localizacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #home__header .home__header-localizacao .home__header-localidade {
   font-size: 0.875rem;
   color: #222222;
@@ -178,11 +316,12 @@ body {
 }
 #home__header .home__header-localizacao .home__header-localizacao__clima {
   display: flex;
+  align-items: center;
 }
 #home__header .home__header-localizacao .home__header-localizacao__clima .home__header-localizacao__clima-estacao {
   width: 100%;
-  max-width: 34px;
-  max-height: 34px;
+  max-width: 48px;
+  max-height: 48px;
   height: 100%;
   margin-right: 10px;
 }
@@ -192,6 +331,49 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 768px) {
+  #home__header .home__header-hora .home__header-hora__titulo {
+    font-size: 5.5rem;
+  }
+  #home__header .home__header-hora .home__header-hora__data {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  #home__header {
+    height: auto;
+  }
+  #home__header .logo_uol {
+    display: none;
+  }
+  #home__header .home__header-hora .home__header-hora__titulo {
+    font-size: 4rem;
+  }
+  #home__header .home__header-hora .home__header-hora__data {
+    font-size: 10px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  #home__header .home__header-hora .home__header-hora__titulo {
+    font-size: 3rem;
+  }
+  #home__header .home__header-hora .home__header-hora__data {
+    font-size: 8px;
+    margin: 0;
+  }
+  #home__header .home__header-localizacao .home__header-localidade {
+    font-size: 0.75rem;
+  }
+  #home__header .home__header-localizacao .home__header-localizacao__clima .home__header-localizacao__clima-temperatura {
+    font-size: 2rem;
+  }
+  #home__header .home__header-localizacao .home__header-localizacao__clima .home__header-localizacao__clima-estacao {
+    max-width: 38px;
+    max-height: 38px;
+  }
+}
 #footer {
   height: 100%;
   width: 100%;
@@ -201,40 +383,42 @@ body {
   align-items: center;
   color: #FFFFFF;
 }
-#footer::before {
-  content: "";
-  width: 1px;
-  height: 55px;
-  background-color: #FFFFFF;
-  position: absolute;
-  left: 650px;
+#footer .footer_logo_uol {
+  display: none;
 }
 #footer .footer__texto {
-  padding: 1rem 1rem 1rem 4rem;
+  padding: 1rem 3rem 1rem 5rem;
   width: 100%;
   max-width: 540px;
   font-size: 0.75rem;
   text-align: end;
   line-height: 15px;
+  border-right: 1px solid #FFFFFF;
 }
 #footer .footer_temporizador {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 250px;
 }
 #footer .footer_temporizador .footer_temporizador-texto {
-  width: 100%;
-  max-width: 110px;
+  width: 50%;
   text-align: end;
-  margin-right: 2rem;
   font-size: 14px;
   line-height: 20px;
 }
 #footer .footer_temporizador .footer_temporizador-contador {
+  padding: 0.5rem 0;
   text-align: center;
+  width: 50%;
 }
 #footer .footer_temporizador .footer_temporizador-contador .footer_temporizador-contador_segundos {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
+}
+#footer .footer_temporizador .footer_temporizador-contador .footer_temporizador-contador-texto {
+  font-size: 0.75rem;
+  color: #FFFFFF;
 }
 #footer .footer_buttons {
   width: 100%;
@@ -245,13 +429,19 @@ body {
 #footer .footer_buttons .container_footer_button {
   display: flex;
   text-align: center;
+  justify-content: center;
   height: 100%;
   width: 50%;
-  cursor: pointer;
 }
 #footer .footer_buttons .container_footer_button .button {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   line-height: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+#footer .footer_buttons .container_footer_button .link_button {
   width: 100%;
   height: 100%;
   display: flex;
@@ -267,4 +457,159 @@ body {
   color: #FFFFFF;
   background: transparent;
   font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  #footer .footer__texto {
+    font-size: 0.625rem;
+    padding: 0 2rem 0 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #footer .footer__texto {
+    padding: 0 2rem 0 2rem;
+    font-size: 0.625rem;
+    line-height: 12px;
+  }
+  #footer .footer_temporizador {
+    max-width: 200px;
+  }
+  #footer .footer_temporizador .footer_temporizador-texto {
+    font-size: 0.75rem;
+  }
+  #footer .footer_temporizador .footer_temporizador-contador .footer_temporizador-contador_segundos {
+    font-size: 2.2rem;
+  }
+  #footer .footer_buttons {
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 540px) {
+  #footer {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  #footer .footer_logo_uol {
+    display: block;
+    margin: 1rem 0;
+  }
+  #footer .footer__texto {
+    margin-top: 1rem;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+  }
+  #footer .footer_temporizador {
+    margin: 2rem 0;
+  }
+  #footer .footer_temporizador .footer_temporizador-texto {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  #footer .footer_temporizador .footer_temporizador-contador .footer_temporizador-contador_segundos {
+    font-size: 3rem;
+  }
+  #footer .footer_buttons {
+    align-items: center;
+  }
+  #footer .footer_buttons .container_footer_button {
+    height: 100%;
+  }
+  #footer .footer_buttons .container_footer_button .button {
+    padding: 1rem;
+  }
+}
+#alert_modal,
+#alert_modal_logout {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+#alert_modal .container_modal,
+#alert_modal_logout .container_modal {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#alert_modal .container_modal .modal,
+#alert_modal_logout .container_modal .modal {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  background-color: #FFFFFF;
+  background-image: url(../assets/img-home.png);
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  background-size: 30%;
+  border-radius: 50px;
+  text-align: center;
+  position: relative;
+}
+#alert_modal .container_modal .modal .modal_fechar,
+#alert_modal_logout .container_modal .modal .modal_fechar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
+  width: 100%;
+  max-width: 50px;
+  height: 100%;
+  max-height: 50px;
+  border-radius: 50%;
+  color: #E0E0E0;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+#alert_modal .container_modal .modal .modal_fechar:hover,
+#alert_modal_logout .container_modal .modal .modal_fechar:hover {
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+#alert_modal .container_modal .modal .mensagem_modal,
+#alert_modal_logout .container_modal .modal .mensagem_modal {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: #C12D18;
+}
+#alert_modal .container_modal .modal .modal_buttons,
+#alert_modal_logout .container_modal .modal .modal_buttons {
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+#alert_modal .container_modal .modal .modal_buttons .button_modal,
+#alert_modal_logout .container_modal .modal .modal_buttons .button_modal {
+  padding: 1rem;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#alert_modal .container_modal .modal .modal_buttons .button_modal:hover,
+#alert_modal_logout .container_modal .modal .modal_buttons .button_modal:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 540px) {
+  #alert_modal .container_modal .modal .mensagem_modal,
+#alert_modal_logout .container_modal .modal .mensagem_modal {
+    margin-top: 4rem;
+  }
 }/*# sourceMappingURL=main.css.map */

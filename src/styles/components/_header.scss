@@ -28,19 +28,25 @@
   }
 
   .home__header-localizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .home__header-localidade {
       font-size: .875rem;
       color: $color-hora;
       margin-bottom: .5rem;
+
     }
 
     .home__header-localizacao__clima {
       display: flex;
+      align-items: center;
 
       .home__header-localizacao__clima-estacao {
         width: 100%;
-        max-width: 34px;
-        max-height: 34px;
+        max-width: 48px;
+        max-height: 48px;
         height: 100%;
         margin-right: 10px;
       }
@@ -52,4 +58,68 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  #home__header{
+    .home__header-hora{
+      .home__header-hora__titulo{
+          font-size: 5.5rem;
+      }
+
+      .home__header-hora__data{
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 540px){
+  #home__header{
+    height: auto;
+    .logo_uol{
+      display: none;
+    }
+    .home__header-hora{
+      .home__header-hora__titulo{
+          font-size: 4rem;
+      }
+
+      .home__header-hora__data{
+        font-size: 10px;
+        margin: 0;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 375px){
+  #home__header{
+    .home__header-hora{
+      .home__header-hora__titulo{
+          font-size: 3rem;
+      }
+
+      .home__header-hora__data{
+        font-size: 8px;
+        margin: 0;
+      }
+    }
+
+    .home__header-localizacao{
+      .home__header-localidade{
+        font-size: .75rem;
+      }
+      .home__header-localizacao__clima{
+        .home__header-localizacao__clima-temperatura{
+          font-size: 2rem;
+        }
+        .home__header-localizacao__clima-estacao{
+          max-width: 38px;
+          max-height: 38px;
+        }
+      }
+    }
+  } 
 }

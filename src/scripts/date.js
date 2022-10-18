@@ -9,7 +9,7 @@ const containerData = document.querySelector('.home__header-hora__data');
 const geraHora = () => {
   const date = new Date();
   const hora = date.getHours();
-  const minutos = date.getMinutes();
+  const minutos = String(date.getMinutes()).padStart(2, '0');
   containerHora.innerHTML = `${hora}:${minutos}`
 }
 //------------------------------------------------------------------------------------
@@ -38,34 +38,39 @@ geraData()
 
 //----------------Funções aux que tranformam os valores do Date-----------------------
 function pegaDiaSemana(date) {
-  let diaSemana = '';
-  date == 0 ? diaSemana = 'domingo' : '';
-  date == 1 ? diaSemana = 'segunda-feira' : '';
-  date == 2 ? diaSemana = 'terça-feira' : ''
-  date == 3 ? diaSemana = 'quarta-feira' : ''
-  date == 4 ? diaSemana = 'quinta-feira' : ''
-  date == 5 ? diaSemana = 'sexta-feira' : ''
-  date == 6 ? diaSemana = 'sábado' : ''
+  let diasSemanas = [
+    'domindo',
+    'segunda-feira',
+    'terça-feira',
+    'quarta-feira',
+    'quinta-feira',
+    'sexta-feira',
+    'sábado'
+  ];
+
+  let diaSemana = diasSemanas[date]
 
   return diaSemana
 }
 
 function pegaMes(mes) {
-  let mesAno = '';
-  mes == 0 ? mesAno = 'janeiro' : '';
-  mes == 1 ? mesAno = 'fevereiro' : '';
-  mes == 2 ? mesAno = 'março' : ''
-  mes == 3 ? mesAno = 'abril' : ''
-  mes == 4 ? mesAno = 'maio' : ''
-  mes == 5 ? mesAno = 'junho' : ''
-  mes == 6 ? mesAno = 'julho' : ''
-  mes == 7 ? mesAno = 'agosto' : ''
-  mes == 8 ? mesAno = 'setembro' : ''
-  mes == 9 ? mesAno = 'outubro' : ''
-  mes == 10 ? mesAno = 'novembro' : ''
-  mes == 11 ? mesAno = 'dezembro' : ''
+  let mesesAno = [
+    'janeiro',
+    'fevereiro',
+    'março',
+    'abril',
+    'maio',
+    'junho',
+    'julho',
+    'agosto',
+    'setembro',
+    'outubro',
+    'novembro',
+    'dezembro',
+  ]
+
+  let mesAno = mesesAno[mes]
 
   return mesAno
 }
-
 // --------------------------------------------------------------------------

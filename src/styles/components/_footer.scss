@@ -7,46 +7,49 @@
   align-items: center;
   color: $color-branco;
 
-  &::before {
-    content: '';
-    width: 1px;
-    height: 55px;
-    background-color: $color-branco;
-    position: absolute;
-    left: 650px;
-
+  .footer_logo_uol{
+    display: none;
   }
 
   .footer__texto {
-    padding: 1rem 1rem 1rem 4rem;
+    padding: 1rem 3rem 1rem 5rem;
     width: 100%;
     max-width: 540px;
     font-size: .75rem;
     text-align: end;
     line-height: 15px;
+    border-right: 1px solid #FFFFFF;
   }
 
   .footer_temporizador {
     display: flex;
     align-items: center;
-
+    width: 100%;
+    max-width: 250px;
 
     .footer_temporizador-texto {
-      width: 100%;
-      max-width: 110px;
+      width: 50%;
       text-align: end;
-      margin-right: 2rem;
       font-size: 14px;
       line-height: 20px;
 
     }
 
     .footer_temporizador-contador {
+      padding: .5rem 0;
       text-align: center;
+      width: 50%;
+
 
       .footer_temporizador-contador_segundos {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 700;
+      }
+
+      .footer_temporizador-contador-texto {
+        font-size: .75rem;
+        color: $color-branco;
+
       }
     }
   }
@@ -60,13 +63,20 @@
     .container_footer_button {
       display: flex;
       text-align: center;
+      justify-content: center;
       height: 100%;
       width: 50%;
-      cursor: pointer;
 
       .button {
-        font-size: .75rem;
+        font-size: .82rem;
         line-height: 15px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+
+      .link_button {
         width: 100%;
         height: 100%;
         display: flex;
@@ -78,6 +88,7 @@
       .footer_button-continuar {
         color: $font-color-home;
         background-color: $color-branco;
+
       }
 
       .footer_button-voltar {
@@ -88,3 +99,82 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #footer{
+    .footer__texto{
+      font-size: .625rem;
+      padding: 0 2rem 0 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer{
+    .footer__texto{
+      padding: 0 2rem 0 2rem;
+      font-size: .625rem;
+      line-height: 12px;
+
+    }
+    .footer_temporizador{
+      max-width: 200px;
+      .footer_temporizador-texto{
+        font-size: .75rem;
+      }
+      .footer_temporizador-contador{
+        .footer_temporizador-contador_segundos{
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .footer_buttons{
+      max-width: 220px;
+    }
+  }
+}
+
+@media screen and (max-width: 540px){
+  #footer{
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 2rem;
+
+    .footer_logo_uol{
+      display: block;
+      margin: 1rem 0;
+    }
+
+    .footer__texto{
+      margin-top: 1rem;
+      padding: 0;
+      text-align: center;
+      font-size: 12px;
+      border: none;
+    }
+    .footer_temporizador{
+      margin: 2rem 0;
+      .footer_temporizador-texto{
+        text-align: center;
+        font-size: .75rem;
+      }
+      .footer_temporizador-contador{
+          .footer_temporizador-contador_segundos{
+            font-size: 3rem;
+          }   
+        }
+      }
+    .footer_buttons{
+      align-items: center;
+      .container_footer_button{
+        height: 100%;
+        .button{
+          padding: 1rem;
+        }
+      }
+    }
+  }
+ }
+

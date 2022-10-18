@@ -1,20 +1,25 @@
 #body_home {
   background: linear-gradient(105.96deg, $color-branco 0%, #F0F0F0 97.86%);
   width: 100%;
+  height: 100vh;
 
   #home {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: url(../assets/img-home.png);
     background-repeat: no-repeat;
     background-position: 0 bottom;
-    background-size: 400px;
+    background-size: 28%;
     font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-rows: 15% 74% 11%;
 
     &:first-child {
       margin: 0;
+    }
+
+    .tablet_logo_uol{
+      display: none;
     }
 
     #home__missao {
@@ -46,4 +51,91 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1260px) {
+  #body_home #home #home__missao .home__missao-texto .home__missao-texto-ingles{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #body_home{
+    #home{
+      background-size: 30%;
+      #home__missao{
+          .home__missao-texto{
+            .home__missao-texto-ingles{
+              font-size: 2rem;
+            } 
+        }
+      }
+    }
+  }  
+}
+@media screen and (max-width: 825px) {
+  #body_home{
+    #home{
+      background-size: 35%;
+      #home__missao{
+        margin-right: 3rem;
+          .home__missao-texto{
+            .home__missao-texto-ingles{
+              font-size: 1.5rem;
+            } 
+        }
+      }
+    }
+  }  
+}
+
+@media screen and (max-width: 540px){
+  #body_home{
+    height: auto;
+    #home{
+      background: none;
+      display: flex;
+      flex-direction: column;
+
+      .tablet_logo_uol{
+        display: block;
+        align-self: center;
+        width: 40%;
+        margin-top: 3rem;
+      }
+      #home__missao{
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+          .home__missao-texto{
+            .home__missao-texto-ingles{
+              font-size: 1.5rem;
+            } 
+        }
+      }
+    }
+  }  
+}
+
+
+@media screen and (max-width: 425px){
+  #body_home{   
+    #home{    
+      #home__missao{
+          align-self: center;
+          margin: 7rem 0 7rem 0;
+          width: 100%;
+          .home__missao-texto{
+            text-align: center;
+            width: 95%;
+            margin: 0 auto;
+            .home__missao-texto-ingles{
+              font-size: 1.5rem;
+            } 
+            .home__missao-texto-traduzido{
+              font-size: .875rem;
+            }
+        }
+      }
+    }
+  }  
 }
