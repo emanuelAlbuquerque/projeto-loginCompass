@@ -14,7 +14,7 @@ function temporizador() {
 
     buttonConfirmar.addEventListener('click', () => {
       window.location.replace('../../index.html')
-      localStorage.clear()
+      localStorage.removeItem('bdUsuarios')
     })
 
     buttonNegar.addEventListener('click', () => {
