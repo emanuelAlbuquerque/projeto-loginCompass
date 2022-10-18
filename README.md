@@ -89,3 +89,6 @@ $ cd projeto-loginCompass
 ## 📝 Autor
 
 Feito com ❤️ por José Emanuel da Silva Souza Albuquerque 👋🏽 [Entre em contato!](https://www.linkedin.com/in/emanuel-albuquerque-2abb5a232/)
+
+©️ José Emanuel / CompassUOL - 2022
+
