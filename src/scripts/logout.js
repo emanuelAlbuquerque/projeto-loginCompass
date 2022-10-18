@@ -3,10 +3,10 @@ const modal_logout = document.querySelector('#alert_modal_logout')
 const logout_confirmar = document.querySelector('#logout_confirmar')
 const logout_negar = document.querySelector('#logout_negar')
 const logout_fechar = document.querySelector('#modal_fechar')
-let stopwatch;
+
 
 button_logout.addEventListener('click', () => {
-  modal_logout.style.display = 'flex'
+  modal_logout.style.display = 'flex'//Se ele clicar em logOut aparece o modal
 })
 
 logout_confirmar.addEventListener('click', () => {
@@ -14,7 +14,7 @@ logout_confirmar.addEventListener('click', () => {
 })
 
 logout_negar.addEventListener('click', () => {
-  localStorage.clear()
+  localStorage.removeItem('bdUsuarios')//Remove os usuarios do banco de dados
   window.location.replace('../../index.html')
 })
 
