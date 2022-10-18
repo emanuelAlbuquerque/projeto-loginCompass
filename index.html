@@ -5,48 +5,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/reset/reset.css">
   <link rel="stylesheet" href="./src/styles/main.css">
-  <title>Tela de login - COMPASS</title>
+  <title>Compass - Login</title>
 </head>
 
 <body>
   <main class="container_tela-login">
 
+    <img src="./src/assets/logo-compass.svg" alt="" class="logo_compass-login">
+
     <section id="tela-login__login">
-      <div class="tela-login__login-header">
-        <h1 class="tela-login__login-header__titulo">Olá,</h1>
-        <p class="tela-login__login-header__description">Para continuar navegando de forma segura, efetue o login na
-          rede.</p>
+      <div class="container_login">
+        <div class="tela-login__login-header">
+          <h1 class="tela-login__login-header__titulo">Olá,</h1>
+          <p class="tela-login__login-header__description">Para continuar navegando de forma segura, efetue o login na
+            rede.</p>
+        </div>
+  
+        <form class="form__login">
+          <h2 class="form__login-titulo">Login</h2>
+  
+          <div class="form__login-group">
+            <label for="usuario" class="form__login-group_label"><img src="./src/assets/icon-user.svg" alt=""
+                class="icon"></label>
+            <input type="email" id="usuario" name="usuario" class="usuario input-login" placeholder="Usuário">
+          </div>
+  
+          <div class="form__login-group">
+            <label for="senha" class="form__login-group_label"><img src="./src/assets/cadeado.svg" alt=""
+                class="icon"></label>
+            <input type="password" id="senha" name="senha" class="senha input-login" placeholder="Senha">
+          </div>
+  
+          <p class="form__login-error">
+            Ops, usuário ou senha inválidos. Tente novamente!
+          </p>
+  
+          <input type="submit" value="Continuar" class="input-button">
+        </form>
       </div>
-
-      <form action="/" class="form__login">
-        <h2 class="form__login-titulo">Login</h2>
-
-        <div class="form__login-group">
-          <label for="usuario" class="form__login-group_label"><img src="./src/assets/icon-user.svg" alt=""
-              class="icon"></label>
-          <input type="text" id="usuario" name="usuario" class="usuario input-login" placeholder="Usuário">
-        </div>
-
-        <div class="form__login-group">
-          <label for="senha" class="form__login-group_label"><img src="./src/assets/cadeado.svg" alt=""
-              class="icon"></label>
-          <input type="password" id="senha" name="senha" class="senha input-login" placeholder="Senha">
-        </div>
-
-        <p class="form__login-error">
-          Ops, usuário ou senha inválidos. Tente novamente!
-        </p>
-
-        <input type="submit" value="Continuar" class="input-button">
-      </form>
-
     </section>
 
 
@@ -56,6 +59,7 @@
 
     </section>
   </main>
+  <script type="module" src="./src/scripts/dadosUsuario.js"></script>
 </body>
 
 </html>
