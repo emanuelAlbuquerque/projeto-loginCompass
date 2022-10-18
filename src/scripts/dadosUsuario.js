@@ -13,14 +13,14 @@ function recebeDadosUsuario(event) {
   event.preventDefault()
 
   let bdUsuario = {};
-  let nameUsuario = inputUsuario.value.toLowerCase();
-  let senhaUsuario = inputSenha.value.toLowerCase();
+  let nameUsuario = inputUsuario.value;
+  let senhaUsuario = inputSenha.value;
 
   if ((nameUsuario != 'admin.admin.pb@compasso.com.br' || senhaUsuario != 'admin')) {
     inputUsuario.style.borderColor = '#E9B425';
     inputSenha.style.borderColor = '#E9B425';
     mensagemError.style.visibility = 'visible'
-    //Se o usuario e a senha for incorretaxx'
+    //Se o usuario e a senha for incorreta
   } else {
     bdUsuario = {
       usuario: nameUsuario,
@@ -35,13 +35,13 @@ function moveIcone() {
   const label = document.querySelectorAll('.form__login-group_label')
   //Se o input tiver algo digitado, adicina a classe de animação dos ícones
 
-  if (usuario.value.length > 0) {
+  if (inputUsuario.value.length > 0) {
     label[0].classList.add('animation')
   } else {
     label[0].classList.remove('animation')
-  }
+  }//Se tiver algo digitado no input adiciona a classe, senao retira
 
-  if (senha.value.length > 0) {
+  if (inputSenha.value.length > 0) {
     label[1].classList.add('animation')
   } else {
     label[1].classList.remove('animation')
@@ -52,7 +52,7 @@ function usuarioConectado() {
   //Pega o usuario que está no localStorage e adiciona no campo de usuario e senha;
   const usuarios = getUsuarios();
 
-  if (!(usuarios.usuario == undefined && usuarios.senha == undefined)) {
+  if (!(usuarios.usuario == undefined && usuarios.senha == undefined)) {//Se não tiver nada no localStora retorna undefined
     inputSenha.value = usuarios.senha
     inputUsuario.value = usuarios.usuario
     moveIcone()
